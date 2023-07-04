@@ -37,7 +37,7 @@ int main(int argc, char* argv[]) {
   Books lazarillo{"El lazarillo de Tormes", 1554, 18.0};
   Books pilares{"Los pilares de la Tierra", 1989, 27.0};
 
-  // Con impuestos
+  // Con impuestos a
   quijote.TaxedPrice(tax);
   lazarillo.TaxedPrice(tax);
   pilares.TaxedPrice(tax);

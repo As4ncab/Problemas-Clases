@@ -167,8 +167,10 @@ int ToIntegrer(std::string tax) {
   int number{0};
 
   for (long unsigned i{0}; i < tax.size(); i++) {
-    number *= 10;
-    number += (tax[i] - '0');
+    if (isdigit(tax[i])) {
+      number *= 10;
+      number += (tax[i] - '0');
+    }
   }
 
   return number;
