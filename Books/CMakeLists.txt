@@ -15,6 +15,19 @@
 #            3.- cd build
 #            4.- CMake
 #            5.- make
+#
+#
+#          Instalación de Google Tests:
+#          https://github.com/google/googletest/blob/master/googletest/README.md
+#          git clone https://github.com/google/googletest.git -b release-1.10.0
+#  				 cd googletest/
+#  				 mkdir build
+#  				 cd build/
+#  				 cmake .. -DBUILD_GMOCK=OFF
+# 				 make
+#  				 sudo make install 
+#
+#  				 ls -ltr /usr/local/include
 
 # Set especifications
 cmake_minimum_required(VERSION 3.1)
