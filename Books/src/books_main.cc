@@ -34,8 +34,8 @@ int main(int argc, char* argv[]) {
 
   int tax{ToIntegrer(argv[1])};
   Books quijote{"El quijote de la Mancha", 1605, 21.0};
-  Books lazarillo;
-  Books pilares;
+  Books lazarillo{"El lazarillo de Tormes", 1554, 18.0};
+  Books pilares{"Los pilares de la Tierra", 1989, 27.0};
 
   std::cout << tax << std::endl;
   // Sin impuestos
