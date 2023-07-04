@@ -47,7 +47,7 @@ class Books {
   void TaxedPrice(const double&);
 
   // Sobrecarga de Operadores E/S
-  friend std::ostream& operator<<(std::ostream&, Books&);
+  std::ostream& operator<<(std::ostream&);
 
  private:
   // Atributos privados de la clase Books
