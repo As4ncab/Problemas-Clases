@@ -116,13 +116,40 @@ std::ostream& Books::operator<<(std::ostream& os) {
 
 // Funciones de Información
 /**
- * @brief Función que comprueba que se han pasado la cantidad correcta de parámetros 
- * 
- * @param argc 
- * @param kCorrectParams 
- * @return true 
- * @return false 
+ * @brief Función que comprueba que se han pasado la cantidad correcta de
+ *        parámetros
+ *
+ * @param argc
+ * @param kCorrectParams
+ * @return true
+ * @return false
  */
 bool CheckCorrectParams(int argc, const int kCorrectParams) {
+  if (argc == kCorrectParams) {
+    return true;
+  }
 
+  return false;
+}
+
+/**
+ * @brief Función que imprime la manera correcta de llamar al programa desde la
+ *        terminal
+ *
+ * @param argv
+ */
+void Usage(char* argv) {
+  std::cout << "Too many/few arguments in program call.\n    Try: " << argv[0]
+            << " [PRICE (DOUBLE)]\n"
+            << std::endl;
+}
+
+/**
+ * @brief Función que imprime el propósito del programa
+ *
+ */
+void ProgramPurpose() {
+  std::cout << "Este programa instancia 3 libros y calcula su precio según un "
+               "porcentaje de impuestos.\n"
+            << std::endl;
 }
