@@ -140,7 +140,7 @@ bool CheckCorrectParams(int argc, const int kCorrectParams) {
  */
 void Usage(char** argv) {
   std::cout << "Too many/few arguments in program call.\n    Try: " << argv[0]
-            << " [PRICE (DOUBLE)]\n"
+            << " [TAX (DOUBLE)]\n"
             << std::endl;
 }
 
