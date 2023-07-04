@@ -113,3 +113,17 @@ std::ostream& Books::operator<<(std::ostream& os) {
 
   return os;
 }
+
+// Funciones de Información
+/**
+ * @brief Función que comprueba que se han pasado la cantidad correcta de parámetros 
+ * 
+ * @param argc 
+ * @param argv 
+ * @param kCorrectParams 
+ * @return true 
+ * @return false 
+ */
+bool CheckCorrectParams(int argc, char* argv, const int kCorrectParams) {
+
+}
