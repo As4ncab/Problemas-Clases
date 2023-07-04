@@ -21,6 +21,9 @@
  *
  */
 
+#ifndef BOOKS_H_
+#define BOOKS_H_
+
 #include <iomanip>
 #include <iostream>
 #include <string>
@@ -64,3 +67,5 @@ void ProgramPurpose(void);
 
 // Funciones de cambio de tipo
 int ToIntegrer(const std::string);
+
+#endif
