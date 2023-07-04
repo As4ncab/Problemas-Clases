@@ -65,4 +65,7 @@ bool CheckCorrectParams(int, const int);
 void Usage(char**);
 void ProgramPurpose(void);
 
+// Funciones de Cambio de Tipo
+int ToIntegrer(char**);
+
 #endif

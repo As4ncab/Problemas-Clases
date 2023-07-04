@@ -32,6 +32,7 @@ int main(int argc, char* argv[]) {
 
   ProgramPurpose();
 
+  int tax{argv[1] - '0'};
   Books quijote{"El quijote de la Mancha", 1605, 21.0};
   Books lazarillo;
   Books pilares;
@@ -39,8 +40,18 @@ int main(int argc, char* argv[]) {
   // Sin impuestos
   std::cout << "Libros sin impuestos:" << std::endl;
   std::cout << "  " << quijote << std::endl;
+  std::cout << "  " << lazarillo << std::endl;
+  std::cout << "  " << pilares << std::endl;
 
   // Con impuestos
+  quijote.TaxedPrice(tax);
+  lazarillo.TaxedPrice(tax);
+  pilares.TaxedPrice(tax);
+
+  std::cout << "Libros con impuestos:" << std::endl;
+  std::cout << "  " << quijote << std::endl;
+  std::cout << "  " << lazarillo << std::endl;
+  std::cout << "  " << pilares << std::endl;
 
   return 0;
 }
