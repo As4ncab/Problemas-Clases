@@ -32,7 +32,7 @@ int main(int argc, char* argv[]) {
 
   ProgramPurpose();
 
-  int tax{argv[1] - '0'};
+  int tax{ToIntegrer(argv[1])};
   Books quijote{"El quijote de la Mancha", 1605, 21.0};
   Books lazarillo;
   Books pilares;
