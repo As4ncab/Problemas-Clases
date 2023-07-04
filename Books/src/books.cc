@@ -96,7 +96,7 @@ void Books::SetPrice(const double& price) { price_ = price; }
  * @param tax
  */
 void Books::TaxedPrice(const double& tax) {
-  taxed_price_ += (taxed_price_ * (tax / 100));
+  taxed_price_ = price_ + (price_ * (tax / 100));
 }
 
 // Sobrecarga de Operadores E/S

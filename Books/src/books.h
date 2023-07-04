@@ -58,7 +58,7 @@ class Books {
   std::string title_{" - "};
   int year_of_publish_{0};
   double price_{0.0};
-  double taxed_price_{price_};
+  double taxed_price_{0.0};
 };
 
 // Funciones de Información

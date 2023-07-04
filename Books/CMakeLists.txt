@@ -27,24 +27,37 @@ project(books
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
+# Locate gtests
+find_package(GTest REQUIRED)
+include_directories(${GTEST_INCLUDE_DIRS})
+
 # Tell CMake to put binaries here:
 set(EXECUTABLE_OUTPUT_PATH ${PROJECT_SOURCE_DIR}/build)
 
 # Debug and release flags
-set(CMAKE_CXX_FLAGS_DEBUG "-g -O0 -Wall -Wpedantic")
+set(CMAKE_CXX_FLAGS_DEBUG "-g -O0")
 set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 
 # Tell CMake where to look for *.h files
 include_directories(${PROJECT_SOURCE_DIRECTORY}/src)
 
-# Add executable "coche" to be built from source files
+# Add executables "book" and "runtests" to be built from source files
 add_executable(books
                src/books.h
                src/books.cc
                src/books_main.cc)
 
+add_executable(runtests
+               src/books.h
+               src/books.cc
+               test/books_test.cc
+               test/tests_main.cc)
+
+# Add gtests libraries
+target_link_libraries(runtests ${GTEST_LIBRARIES} pthread)
+
 # Add expected compiler features to target
 target_compile_features(books PRIVATE cxx_std_17)
 
 # Add compile options to target
-target_compile_options(books PRIVATE -Wall -Wpedantic)
+target_compile_options(books PRIVATE -Wall -Wextra -Wpedantic)
