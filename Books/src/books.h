@@ -61,7 +61,7 @@ class Books {
 };
 
 // Funciones de Información
-bool CheckCorrectParams(int, char*, const int);
+bool CheckCorrectParams(int, const int);
 void Usage(char*);
 void ProgramPurpose(void);
 

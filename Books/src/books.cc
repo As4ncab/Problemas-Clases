@@ -119,11 +119,10 @@ std::ostream& Books::operator<<(std::ostream& os) {
  * @brief Función que comprueba que se han pasado la cantidad correcta de parámetros 
  * 
  * @param argc 
- * @param argv 
  * @param kCorrectParams 
  * @return true 
  * @return false 
  */
-bool CheckCorrectParams(int argc, char* argv, const int kCorrectParams) {
+bool CheckCorrectParams(int argc, const int kCorrectParams) {
 
 }
