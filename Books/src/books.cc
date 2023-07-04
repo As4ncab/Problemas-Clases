@@ -35,6 +35,7 @@ Books::Books(std::string title, int year, double price) {
   title_ = title;
   year_of_publish_ = year;
   price_ = price;
+  taxed_price_ = price;
 }
 
 // Getters
@@ -140,7 +141,7 @@ bool CheckCorrectParams(int argc, const int kCorrectParams) {
  */
 void Usage(char** argv) {
   std::cout << "Too many/few arguments in program call.\n    Try: " << argv[0]
-            << " [TAX (DOUBLE)]\n"
+            << " [TAX (INT)]\n"
             << std::endl;
 }
 
@@ -157,9 +158,9 @@ void ProgramPurpose() {
 // Funciones de Cambio de Tipo
 /**
  * @brief Función que cambia valores de tipo char* a int
- * 
- * @param tax 
- * @return int 
+ *
+ * @param tax
+ * @return int
  */
 int ToIntegrer(std::string tax) {
   int number{0};

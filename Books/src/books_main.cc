@@ -37,6 +37,7 @@ int main(int argc, char* argv[]) {
   Books lazarillo;
   Books pilares;
 
+  std::cout << tax << std::endl;
   // Sin impuestos
   std::cout << "Libros sin impuestos:" << std::endl;
   std::cout << "  " << quijote << std::endl;
