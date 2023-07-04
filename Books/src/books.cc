@@ -91,9 +91,24 @@ void Books::SetPrice(const double& price) { price_ = price; }
 // Métodos
 /**
  * @brief Calcula el precio del libro con un impuesto del "tax"%
- * 
- * @param tax 
+ *
+ * @param tax
  */
 void Books::TaxedPrice(const double& tax) {
   taxed_price_ += (taxed_price_ * (tax / 100));
+}
+
+// Sobrecarga de Operadores E/S
+/**
+ * @brief
+ *
+ * @param os
+ * @param book
+ * @return std::ostream&
+ */
+std::ostream& Books::operator<<(std::ostream& os) {
+  os << title_ << ", " << year_of_publish_ << ", " << price_
+     << ", " << taxed_price_;
+
+  return os;
 }
