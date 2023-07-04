@@ -153,3 +153,8 @@ void ProgramPurpose() {
                "porcentaje de impuestos.\n"
             << std::endl;
 }
+
+// Funciones de Cambio de Tipo
+int ToIntegrer(char tax) {
+  return (tax - '0');
+}

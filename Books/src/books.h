@@ -66,6 +66,6 @@ void Usage(char**);
 void ProgramPurpose(void);
 
 // Funciones de Cambio de Tipo
-int ToIntegrer(char**);
+int ToIntegrer(std::string);
 
 #endif
