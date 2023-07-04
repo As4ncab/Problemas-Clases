@@ -44,7 +44,7 @@ class Books {
   void SetPrice(const double&);
 
   // Métodos
-  void TaxedPrice(const double&);
+  int TaxedPrice(const double&);
 
   // Sobrecarga de Operadores E/S
   friend std::ostream& operator<<(std::ostream&, Books&);
