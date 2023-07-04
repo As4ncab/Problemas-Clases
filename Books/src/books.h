@@ -24,6 +24,7 @@
 #ifndef BOOKS_H_
 #define BOOKS_H_
 
+#include <cctype>
 #include <iomanip>
 #include <iostream>
 #include <string>

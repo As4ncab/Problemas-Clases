@@ -37,13 +37,6 @@ int main(int argc, char* argv[]) {
   Books lazarillo{"El lazarillo de Tormes", 1554, 18.0};
   Books pilares{"Los pilares de la Tierra", 1989, 27.0};
 
-  std::cout << tax << std::endl;
-  // Sin impuestos
-  std::cout << "Libros sin impuestos:" << std::endl;
-  std::cout << "  " << quijote << std::endl;
-  std::cout << "  " << lazarillo << std::endl;
-  std::cout << "  " << pilares << std::endl;
-
   // Con impuestos
   quijote.TaxedPrice(tax);
   lazarillo.TaxedPrice(tax);
