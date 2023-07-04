@@ -155,6 +155,19 @@ void ProgramPurpose() {
 }
 
 // Funciones de Cambio de Tipo
-int ToIntegrer(char tax) {
-  return (tax - '0');
+/**
+ * @brief Función que cambia valores de tipo char* a int
+ * 
+ * @param tax 
+ * @return int 
+ */
+int ToIntegrer(std::string tax) {
+  int number{0};
+
+  for (long unsigned i{0}; i < tax.size(); i++) {
+    number *= 10;
+    number += (tax[i] - '0');
+  }
+
+  return number;
 }
