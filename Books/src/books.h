@@ -65,7 +65,4 @@ bool CheckCorrectParams(int, const int);
 void Usage(char*);
 void ProgramPurpose(void);
 
-// Funciones de cambio de tipo
-int ToIntegrer(const std::string);
-
 #endif
