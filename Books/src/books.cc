@@ -23,3 +23,51 @@
 
 #include "books.h"
 
+// Constructores
+/**
+ * @brief Constructor de copia
+ *
+ * @param title
+ * @param year
+ * @param price
+ */
+Books::Books(std::string title, int year, double price) {
+  title_ = title;
+  year_of_publish_ = year;
+  price_ = price;
+}
+
+// Getters
+/**
+ * @brief Devuelve el título del libro
+ *
+ * @return std::string
+ */
+std::string Books::GetTitle() const { return title_; }
+
+/**
+ * @brief Devuelve el año de publicación del libro
+ *
+ * @return int
+ */
+int Books::GetYear() const { return year_of_publish_; }
+
+/**
+ * @brief Devuelve el precio del libro
+ *
+ * @return double
+ */
+double Books::GetPrice() const { return price_; }
+
+/**
+ * @brief Devuelve el precio del libro con impuestos
+ *
+ * @return double
+ */
+double Books::GetTaxedPrice() const { return taxed_price_; }
+
+// Setters
+
+void Books::SetTitle(const std::string& title) {
+  
+}
