@@ -69,5 +69,5 @@ double Books::GetTaxedPrice() const { return taxed_price_; }
 // Setters
 
 void Books::SetTitle(const std::string& title) {
-  
+  title_
 }
