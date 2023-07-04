@@ -170,4 +170,4 @@ int ToIntegrer(std::string tax) {
   }
 
   return number;
-
+}
