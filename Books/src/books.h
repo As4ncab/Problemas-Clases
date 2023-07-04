@@ -42,7 +42,6 @@ class Books {
   void SetTitle(const std::string&);
   void SetYear(const int&);
   void SetPrice(const double&);
-  void SetTaxedPrice(const double&);
 
   // Métodos
   double TaxedPrice(const double&);

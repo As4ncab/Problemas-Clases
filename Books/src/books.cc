@@ -67,7 +67,24 @@ double Books::GetPrice() const { return price_; }
 double Books::GetTaxedPrice() const { return taxed_price_; }
 
 // Setters
+/**
+ * @brief Atribuye el valor de "title" al título del libro
+ *
+ * @param title
+ */
+void Books::SetTitle(const std::string& title) { title_ = title; }
 
-void Books::SetTitle(const std::string& title) {
-  title_
-}
+/**
+ * @brief Atribuye el valor de "year" al año de publicación del libro
+ *
+ * @param year
+ */
+void Books::SetYear(const int& year) { year_of_publish_ = year; }
+
+/**
+ * @brief Atribuye el valor de "price" al precio del libro
+ *
+ * @param price
+ */
+void Books::SetPrice(const double& price) { price_ = price; }
+
