@@ -6,7 +6,13 @@
 
 #IncludeRegexTransform: 
 
+/home/usuario/problemas/Problemas-Clases/Books/src/books.cc
+books.h
 /home/usuario/problemas/Problemas-Clases/Books/src/books.h
+
+/home/usuario/problemas/Problemas-Clases/Books/src/books.h
+cctype
+-
 iomanip
 -
 iostream
