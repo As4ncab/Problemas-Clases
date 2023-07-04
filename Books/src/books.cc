@@ -88,3 +88,12 @@ void Books::SetYear(const int& year) { year_of_publish_ = year; }
  */
 void Books::SetPrice(const double& price) { price_ = price; }
 
+// Métodos
+/**
+ * @brief Calcula el precio del libro con un impuesto del "tax"%
+ * 
+ * @param tax 
+ */
+void Books::TaxedPrice(const double& tax) {
+  taxed_price_ += (taxed_price_ * (tax / 100));
+}
