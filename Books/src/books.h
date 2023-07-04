@@ -2,7 +2,9 @@
  * @file books.h
  * @author Alexia Sánchez Cabrera (alu0101482323@ull.edu.es)
  *
- * @brief Escriba un programa books.cc que defina una clase Book. Esta clase
+ * @brief Librería para clase Books
+ *
+ *        Escriba un programa books.cc que defina una clase Book. Esta clase
  *        debe permitir almacenar las características de un libro: título, año
  *        de publicación y precio. También debe poseer un método que permita
  *        calcular el precio del libro con impuestos.
