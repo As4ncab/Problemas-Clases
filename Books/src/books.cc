@@ -138,7 +138,7 @@ bool CheckCorrectParams(int argc, const int kCorrectParams) {
  *
  * @param argv
  */
-void Usage(char* argv) {
+void Usage(char** argv) {
   std::cout << "Too many/few arguments in program call.\n    Try: " << argv[0]
             << " [PRICE (DOUBLE)]\n"
             << std::endl;
