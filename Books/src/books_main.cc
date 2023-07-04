@@ -1,9 +1,9 @@
 /**
  * @file books_main.cc
  * @author Alexia Sánchez Cabrera (alu0101482323@ull.edu.es)
- * 
+ *
  * @brief Programa Principal
- * 
+ *
  *        Escriba un programa books.cc que defina una clase Book. Esta clase
  *        debe permitir almacenar las características de un libro: título, año
  *        de publicación y precio. También debe poseer un método que permita
@@ -13,12 +13,12 @@
  *        instancie varios libros. Muestre el precio de todos los libros creados
  *        considerando un porcentaje de impuestos pasados desde la línea de
  *        comandos.
- * 
+ *
  * @version 0.1
  * @date 2023-07-04
- * 
+ *
  * @copyright Copyright (c) 2023
- * 
+ *
  */
 
 #include "books.h"
@@ -31,6 +31,16 @@ int main(int argc, char* argv[]) {
   }
 
   ProgramPurpose();
+
+  Books quijote{"El quijote de la Mancha", 1605, 21.0};
+  Books lazarillo;
+  Books pilares;
+
+  // Sin impuestos
+  std::cout << "Libros sin impuestos:" << std::endl;
+  std::cout << "  " << quijote << std::endl;
+
+  // Con impuestos
 
   return 0;
 }

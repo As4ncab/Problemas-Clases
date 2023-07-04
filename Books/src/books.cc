@@ -107,9 +107,9 @@ void Books::TaxedPrice(const double& tax) {
  * @param book
  * @return std::ostream&
  */
-std::ostream& Books::operator<<(std::ostream& os) {
-  os << title_ << ", " << year_of_publish_ << ", " << price_ << ", "
-     << taxed_price_;
+std::ostream& operator<<(std::ostream& os, Books& book) {
+  os << book.title_ << ", " << book.year_of_publish_ << ", " << book.price_
+     << ", " << book.taxed_price_;
 
   return os;
 }
