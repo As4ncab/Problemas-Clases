@@ -100,15 +100,16 @@ void Books::TaxedPrice(const double& tax) {
 
 // Sobrecarga de Operadores E/S
 /**
- * @brief
+ * @brief Sobrecarga del operador de inserción "<<" que imprime por pantalla los
+ *        atributos del libro
  *
  * @param os
  * @param book
  * @return std::ostream&
  */
 std::ostream& Books::operator<<(std::ostream& os) {
-  os << title_ << ", " << year_of_publish_ << ", " << price_
-     << ", " << taxed_price_;
+  os << title_ << ", " << year_of_publish_ << ", " << price_ << ", "
+     << taxed_price_;
 
   return os;
 }
