@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named runtests
+
+# Build rule for target.
+runtests: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runtests
+.PHONY : runtests
+
+# fast build rule for target.
+runtests/fast:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/build
+.PHONY : runtests/fast
+
+#=============================================================================
 # Target rules for targets named books
 
 # Build rule for target.
@@ -129,6 +142,7 @@ src/books.o: src/books.cc.o
 
 # target to build an object file
 src/books.cc.o:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/src/books.cc.o
 	$(MAKE) -f CMakeFiles/books.dir/build.make CMakeFiles/books.dir/src/books.cc.o
 .PHONY : src/books.cc.o
 
@@ -138,6 +152,7 @@ src/books.i: src/books.cc.i
 
 # target to preprocess a source file
 src/books.cc.i:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/src/books.cc.i
 	$(MAKE) -f CMakeFiles/books.dir/build.make CMakeFiles/books.dir/src/books.cc.i
 .PHONY : src/books.cc.i
 
@@ -147,6 +162,7 @@ src/books.s: src/books.cc.s
 
 # target to generate assembly for a file
 src/books.cc.s:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/src/books.cc.s
 	$(MAKE) -f CMakeFiles/books.dir/build.make CMakeFiles/books.dir/src/books.cc.s
 .PHONY : src/books.cc.s
 
@@ -177,6 +193,60 @@ src/books_main.cc.s:
 	$(MAKE) -f CMakeFiles/books.dir/build.make CMakeFiles/books.dir/src/books_main.cc.s
 .PHONY : src/books_main.cc.s
 
+test/books_test.o: test/books_test.cc.o
+
+.PHONY : test/books_test.o
+
+# target to build an object file
+test/books_test.cc.o:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/books_test.cc.o
+.PHONY : test/books_test.cc.o
+
+test/books_test.i: test/books_test.cc.i
+
+.PHONY : test/books_test.i
+
+# target to preprocess a source file
+test/books_test.cc.i:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/books_test.cc.i
+.PHONY : test/books_test.cc.i
+
+test/books_test.s: test/books_test.cc.s
+
+.PHONY : test/books_test.s
+
+# target to generate assembly for a file
+test/books_test.cc.s:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/books_test.cc.s
+.PHONY : test/books_test.cc.s
+
+test/tests_main.o: test/tests_main.cc.o
+
+.PHONY : test/tests_main.o
+
+# target to build an object file
+test/tests_main.cc.o:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/tests_main.cc.o
+.PHONY : test/tests_main.cc.o
+
+test/tests_main.i: test/tests_main.cc.i
+
+.PHONY : test/tests_main.i
+
+# target to preprocess a source file
+test/tests_main.cc.i:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/tests_main.cc.i
+.PHONY : test/tests_main.cc.i
+
+test/tests_main.s: test/tests_main.cc.s
+
+.PHONY : test/tests_main.s
+
+# target to generate assembly for a file
+test/tests_main.cc.s:
+	$(MAKE) -f CMakeFiles/runtests.dir/build.make CMakeFiles/runtests.dir/test/tests_main.cc.s
+.PHONY : test/tests_main.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -185,6 +255,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... runtests"
 	@echo "... books"
 	@echo "... src/books.o"
 	@echo "... src/books.i"
@@ -192,6 +263,12 @@ help:
 	@echo "... src/books_main.o"
 	@echo "... src/books_main.i"
 	@echo "... src/books_main.s"
+	@echo "... test/books_test.o"
+	@echo "... test/books_test.i"
+	@echo "... test/books_test.s"
+	@echo "... test/tests_main.o"
+	@echo "... test/tests_main.i"
+	@echo "... test/tests_main.s"
 .PHONY : help
 
 

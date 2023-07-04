@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/usuario/problemas/Problemas-Clases/Books/src/books.cc
-books.h
-/home/usuario/problemas/Problemas-Clases/Books/src/books.h
-
 /home/usuario/problemas/Problemas-Clases/Books/src/books.h
 cctype
 -
@@ -19,4 +15,10 @@ iostream
 -
 string
 -
+
+/home/usuario/problemas/Problemas-Clases/Books/test/books_test.cc
+../src/books.h
+/home/usuario/problemas/Problemas-Clases/Books/src/books.h
+gtest/gtest.h
+/home/usuario/problemas/Problemas-Clases/Books/test/gtest/gtest.h
 
