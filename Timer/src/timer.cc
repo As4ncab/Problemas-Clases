@@ -155,6 +155,13 @@ bool IsPrime(int& number) {
   return false;
 }
 
+/**
+ * @brief Devuelve la cantidad de números primos existentes hasta llegar a un
+ *        ímite
+ *
+ * @param number
+ * @return long
+ */
 long HowManyPrimes(int& number) {
   long counter{0};
   for (int i{2}; i <= number; i++) {
