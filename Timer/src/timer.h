@@ -61,7 +61,7 @@ class Timer {
 
   // Métodos
   void reset(void);
-  int elapsed(void);
+  auto elapsed(void);
 
  private:
   // atributos privados de la clase Timer

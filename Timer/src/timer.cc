@@ -74,5 +74,7 @@ void Timer::set_end(const auto ms) { clock_ending_point_ = ms; }
  */
 void Timer::reset() {
   clock_starting_point_ = std::chrono::steady_clock::now();
-  clock
+  clock_ending_point_ = clock_starting_point_;
 }
+
+int 
