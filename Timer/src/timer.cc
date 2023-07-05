@@ -47,4 +47,12 @@ std::chrono::milliseconds Timer::get_clock() const {
   return clock_starting_point_;
 }
 
-// 
+// Setter
+/**
+ * @brief Atribuye el valor de ms al atributo privado de la clase Timer
+ *
+ * @param ms
+ */
+void Timer::set_clock(const std::chrono::milliseconds ms) {
+  clock_starting_point_ = ms;
+}
