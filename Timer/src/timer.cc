@@ -77,6 +77,12 @@ void Timer::reset() {
   clock_ending_point_ = clock_starting_point_;
 }
 
+/**
+ * @brief Método que calcula el tiempo que tarda en ejecutarse un proceso (en
+ *        milisegundos)
+ *
+ * @return auto
+ */
 auto Timer::elapsed() {
   set_end(std::chrono::steady_clock::now());
 
@@ -84,3 +90,44 @@ auto Timer::elapsed() {
              clock_ending_point_ - clock_starting_point_)
       .count();
 }
+
+// Funciones de Información
+/**
+ * @brief Función que comprueba que se han pasado la cantidad correcta de
+ *        parámetros
+ *
+ * @param argc
+ * @param kCorrectParams
+ * @return true
+ * @return false
+ */
+bool CheckCorrectParams(int argc, const int kCorrectParams) {
+  if (argc == kCorrectParams) {
+    return true;
+  }
+
+  return false;
+}
+
+/**
+ * @brief Función que imprime la manera correcta de llamar al programa desde la
+ *        terminal
+ *
+ * @param argv
+ */
+void Usage(char** argv) {
+  std::cout << "Too many/few arguments in program call.\n    Try: " << argv[0]
+            << "\n"
+            << std::endl;
+}
+
+/**
+ * @brief Función que imprime el propósito del programa
+ *
+ */
+void ProgramPurpose() {
+  std::cout << "Este programa imprime por pantalla lo que tarda en ejecutarse "
+               "un proceso en milisegundos.\n"
+            << std::endl;
+}
+
