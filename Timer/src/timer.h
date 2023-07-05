@@ -41,7 +41,6 @@
 #include <chrono>
 #include <iostream>
 
-template <class T>
 class Timer {
  public:
   // Constructores
@@ -66,8 +65,8 @@ class Timer {
 
  private:
   // atributos privados de la clase Timer
-  auto clock_starting_point_{0};
-  auto clock_ending_point_{0};
+  std::chrono::steady_clock clock_starting_point_;
+  std::chrono::steady_clock clock_ending_point_;
 };
 
 // Funciones de Información

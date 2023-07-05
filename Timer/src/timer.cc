@@ -41,11 +41,9 @@
 /**
  * @brief Devuelve el valor del atributo privado de la clase Timer
  *
- * @return std::chrono::milliseconds
+ * @return auto
  */
-std::chrono::milliseconds Timer::get_clock() const {
-  return clock_starting_point_;
-}
+template <class T> auto Timer::get
 
 // Setter
 /**
