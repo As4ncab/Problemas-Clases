@@ -132,8 +132,15 @@ void ProgramPurpose() {
 }
 
 // Funciones de Programa
+/**
+ * @brief Devuelve true si el número es primo, 0 si no lo es
+ *
+ * @param number
+ * @return true
+ * @return false
+ */
 bool IsPrime(int& number) {
-  int counter{0};
+  long counter{0};
 
   for (int i{1}; i <= number; i++) {
     if ((number % i) == 0) {
@@ -146,4 +153,15 @@ bool IsPrime(int& number) {
   }
 
   return false;
+}
+
+long HowManyPrimes(int& number) {
+  long counter{0};
+  for (int i{2}; i <= number; i++) {
+    if (IsPrime(i)) {
+      counter++;
+    }
+  }
+
+  return counter;
 }
