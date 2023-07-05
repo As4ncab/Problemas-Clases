@@ -56,3 +56,14 @@ std::chrono::milliseconds Timer::get_clock() const {
 void Timer::set_clock(const std::chrono::milliseconds ms) {
   clock_starting_point_ = ms;
 }
+
+// Métodos
+/**
+ * @brief Reinicicia el contador a 0
+ * 
+ */
+void Timer::reset() {
+  std::chrono::milliseconds rst{0};
+
+  clock_starting_point_ = rst;
+}

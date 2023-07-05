@@ -41,25 +41,33 @@
 #include <chrono>
 #include <iostream>
 
+template <class T>
 class Timer {
  public:
   // Constructores
   Timer() {}
-  Timer(std::chrono::milliseconds ms) { clock_starting_point_ = ms; }
+  Timer(auto start_ms, auto end_ms) {
+    clock_starting_point_ = start_ms;
+    clock_ending_point_ = end_ms;
+  }
   // Destructores
   ~Timer() {}
 
   // Getteres & Setters
-  std::chrono::milliseconds get_clock(void) const;
-  void set_clock(const std::chrono::milliseconds);
+  auto get_start(void) const;
+	auto get_end(void) const;
 
-	// Métodos
-	void reset(void);
-	int elapsed(void);
+  void set_start(const auto);
+	void set_end(const auto);
+
+  // Métodos
+  void reset(void);
+  int elapsed(void);
 
  private:
   // atributos privados de la clase Timer
-  std::chrono::milliseconds clock_starting_point_{0};
+  auto clock_starting_point_{0};
+  auto clock_ending_point_{0};
 };
 
 // Funciones de Información
