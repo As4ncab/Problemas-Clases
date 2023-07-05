@@ -65,8 +65,8 @@ class Timer {
 
  private:
   // atributos privados de la clase Timer
-  std::chrono::steady_clock clock_starting_point_;
-  std::chrono::steady_clock clock_ending_point_;
+  std::chrono::steady_clock::time_point clock_starting_point_;
+  std::chrono::steady_clock::time_point clock_ending_point_;
 };
 
 // Funciones de Información

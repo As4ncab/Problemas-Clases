@@ -43,7 +43,14 @@
  *
  * @return auto
  */
-template <class T> auto Timer::get
+auto Timer::get_start() const { return clock_starting_point_; }
+
+/**
+ * @brief Devuelve el valor del atributo privado de la clase Timer
+ *
+ * @return auto
+ */
+auto Timer::get_end() const { return clock_ending_point_; }
 
 // Setter
 /**
@@ -51,17 +58,21 @@ template <class T> auto Timer::get
  *
  * @param ms
  */
-void Timer::set_clock(const std::chrono::milliseconds ms) {
-  clock_starting_point_ = ms;
-}
+void Timer::set_start(const auto ms) { clock_starting_point_ = ms; }
+
+/**
+ * @brief Atribuye el valor de ms al atributo privado de la clase Timer
+ *
+ * @param ms
+ */
+void Timer::set_end(const auto ms) { clock_ending_point_ = ms; }
 
 // Métodos
 /**
  * @brief Reinicicia el contador a 0
- * 
+ *
  */
 void Timer::reset() {
-  std::chrono::milliseconds rst{0};
-
-  clock_starting_point_ = rst;
+  clock_starting_point_ = std::chrono::steady_clock::now();
+  clock
 }
