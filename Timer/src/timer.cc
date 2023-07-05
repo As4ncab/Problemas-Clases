@@ -77,4 +77,10 @@ void Timer::reset() {
   clock_ending_point_ = clock_starting_point_;
 }
 
-int 
+auto Timer::elapsed() {
+  set_end(std::chrono::steady_clock::now());
+
+  return std::chrono::duration_cast<std::chrono::milliseconds>(
+             clock_ending_point_ - clock_starting_point_)
+      .count();
+}
