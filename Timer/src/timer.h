@@ -50,16 +50,24 @@ class Timer {
   ~Timer() {}
 
   // Getteres & Setters
-  std::chrono::milliseconds GetClock(void) const;
-  void SetClock(const std::chrono::milliseconds);
+  std::chrono::milliseconds get_clock(void) const;
+  void set_clock(const std::chrono::milliseconds);
 
 	// Métodos
-	void Reset(void);
-	
+	void reset(void);
+	int elapsed(void);
 
  private:
   // atributos privados de la clase Timer
   std::chrono::milliseconds clock_starting_point_{0};
 };
+
+// Funciones de Información
+bool CheckCorrectParams(int, const int);
+void Usage(char**);
+void ProgramPurpose(void);
+
+// Funciones de programa
+bool IsPrime(int&);
 
 #endif

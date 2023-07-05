@@ -36,3 +36,15 @@
  */
 
 #include "timer.h"
+
+// Getters
+/**
+ * @brief Devuelve el valor del atributo privado de la clase Timer
+ *
+ * @return std::chrono::milliseconds
+ */
+std::chrono::milliseconds Timer::get_clock() const {
+  return clock_starting_point_;
+}
+
+// 
