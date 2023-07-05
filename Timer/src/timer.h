@@ -76,5 +76,6 @@ void ProgramPurpose(void);
 
 // Funciones de programa
 bool IsPrime(int&);
+long HowManyPrimes(int&);
 
 #endif
