@@ -31,7 +31,7 @@
 # Set especifications
 cmake_minimum_required(VERSION 3.1)
 
-project(coche
+project(file_name
         VERSION 1.0
         DESCRIPTION ""
         LANGUAGES CXX)
@@ -49,14 +49,14 @@ set(CMAKE_CXX_FLAGS_RELEASE "-O3")
 # Tell CMake where to look for *.h files
 include_directories(${PROJECT_SOURCE_DIRECTORY}/src)
 
-# Add executable "coche" to be built from source files
-add_executable(coche
-               src/coche.h
-               src/coche.cc
-               src/coche_main.cc)
+# Add executable "file_name" to be built from source files (*.h, *.cc)
+add_executable(file_name
+               src/file_name.h
+               src/file_name.cc
+               src/file_name_main.cc)
 
 # Add expected compiler features to target
-target_compile_features(coche PRIVATE cxx_std_17)
+target_compile_features(file_name PRIVATE cxx_std_17)
 
 # Add compile options to target
-target_compile_options(coche PRIVATE -Wall -Wpedantic)
+target_compile_options(file_name PRIVATE -Wall -Wpedantic)
