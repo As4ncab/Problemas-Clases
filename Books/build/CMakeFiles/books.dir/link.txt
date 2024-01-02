@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/books.dir/src/books.cc.o CMakeFiles/books.dir/src/books_main.cc.o  -o books 

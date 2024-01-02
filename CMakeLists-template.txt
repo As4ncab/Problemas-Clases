@@ -1,11 +1,6 @@
-# Universidad de La Laguna
-# Escuela Superior de Ingeniería y Tecnología
-# Grado en Ingeniería Informática
-# Informática Básica
-
-# @author Alexia Sánchez Cabrera    (alu0101482323@ull.edu.es)
+# @author S4yu_Ma4ng0
 # @date DD/MM/YYYY
-# @brief CMakeLists.txt Example:
+# @brief CMakeLists.txt example:
 #          CMakeLists.txt defines the whole build.
 #          CMake reads CMakeLists.txt sequentially.
 #
