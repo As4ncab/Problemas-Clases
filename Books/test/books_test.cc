@@ -12,6 +12,7 @@
  */
 
 #include "../src/books.h"
+#include "../src/tools.h"
 
 #include "gtest/gtest.h"
 
@@ -36,29 +37,16 @@ TEST(TaxedPrice, TaxEqualToZero) {
 
 ///< Function CheckCorrectParams()
 TEST(CorrectParams, CorrectAmountOfParameters) {
+  char** argv;
   ///< argc == 2 parameters
-  EXPECT_EQ(CheckCorrectParams(2, 2), true);
+  EXPECT_EQ(CheckCorrectParameters(2, argv, 2), true);
 }
 
 TEST(CorrectParams, IncorrectAmountOfParameters) {
+  char** argv;
   ///< argc < 2 parameters
-  EXPECT_EQ(CheckCorrectParams(1, 2), 0);
+  EXPECT_EQ(CheckCorrectParameters(1, argv, 2), 0);
   ///< argc > 2 parameters
-  EXPECT_EQ(CheckCorrectParams(3, 2), 0);
+  EXPECT_EQ(CheckCorrectParameters(3, argv, 2), 0);
 }
-
-// ///< Function ToIntegrer()
-// TEST(ToInt, ConverToIntegrer) {
-//   EXPECT_EQ(ToIntegrer("7"), 7);
-//   EXPECT_EQ(ToIntegrer("15"), 15);
-//   EXPECT_EQ(ToIntegrer("512"), 512);
-//   EXPECT_EQ(ToIntegrer("1000000"), 1000000);
-// }
-
-// TEST(ToInt, ConvertToIntegererWithLetters) {
-//   EXPECT_EQ(ToIntegrer("7aaaaaaaaaaaaa"), 7);
-//   EXPECT_EQ(ToIntegrer("70eeee3rrr0"), 7030);
-//   EXPECT_EQ(ToIntegrer(""), 0);
-//   EXPECT_EQ(ToIntegrer("745fdsjgvnj@#~$%$&4342"), 7454342);
-// }
 }  ///< namespace
