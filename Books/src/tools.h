@@ -21,8 +21,9 @@
 
 ///< Constant variables
 const std::string kHelpText{
-    "Given the dimensions of a box, the program instantiates a 'Caja' object "
-    "and computes it.\n"};
+    "Given the title, year of release and price of a book, the program "
+    "computes its price with a certain percentage of tax applied and prints "
+    "the specifications of the books.\n"};
 
 ///< Info/Error functions
 void PrintProgramPurpose(void);
