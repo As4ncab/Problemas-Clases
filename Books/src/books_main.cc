@@ -21,21 +21,15 @@
 ///< Client program
 int main(int argc, char* argv[]) {
   ///< Verification of suficient amount of parameters in program call
-  if (!CheckCorrectParameters(argc, argv, 5)) exit(EXIT_SUCCESS);
+  if (!CheckCorrectParameters(argc, argv, 2)) exit(EXIT_SUCCESS);
   ///< Initial values
-  int tax{std::stod(argv[4])};
-  Books quijote{argv[1], std::stoi(argv[2]), std::stod(argv[3])};
+  int tax{std::stod(argv[1])};
+  Books quijote{"El Quijote de La Mancha", 1605, 21.00};
   Books lazarillo{"El lazarillo de Tormes", 1554, 18.00};
-  Books pilares;  //"Los pilares de la Tierra", 1989, 27.00€
+  Books pilares{"Los pilares de la Tierra", 1989, 27.00};
   PrintProgramPurpose();
   std::cout << "Book 1:\n  " << quijote << "\nBook 2:\n  " << lazarillo
             << "\nBook 3:\n  " << pilares << std::endl;
-  ///< Values introduced by the user
-  std::cout << "\nInroduce the dimensions of the third book (title -> year -> "
-               "price): ";
-  std::cin >> pilares;
-  std::cout << "Updated values:\nBook 1:\n  " << quijote << "\nBook 2:\n  "
-            << lazarillo << "\nBook 3:\n  " << pilares << std::endl;
   ///< Tax included
   quijote.TaxedPrice(tax);
   lazarillo.TaxedPrice(tax);
