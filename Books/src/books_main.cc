@@ -1,51 +1,47 @@
 /**
- * @file books_main.cc
- * @author Alexia Sánchez Cabrera (alu0101482323@ull.edu.es)
+ * Universidad de La Laguna
+ * Escuela Superior de Ingeniería y Tecnología
+ * Grado de Ingeniería Informática
+ * Informática Básica 2020-2021
  *
- * @brief Programa Principal
+ * @file caja_main.cc
+ * @author S4yuM4ng0    (s4yum4ng0@random.com)
+ * @date Jun 24 2021
  *
- *        Escriba un programa books.cc que defina una clase Book. Esta clase
- *        debe permitir almacenar las características de un libro: título, año
- *        de publicación y precio. También debe poseer un método que permita
- *        calcular el precio del libro con impuestos.
+ * @brief Given the title, year of release and price of a book, the program
+ *        computes its price with a certain percentage of tax applied and prints
+ *        the specifications of the books.
  *
- *        Una vez definida la clase, implemente una función principal donde
- *        instancie varios libros. Muestre el precio de todos los libros creados
- *        considerando un porcentaje de impuestos pasados desde la línea de
- *        comandos.
- *
- * @version 0.1
- * @date 2023-07-04
- *
- * @copyright Copyright (c) 2023
- *
+ * @bug There are no known bugs
  */
 
 #include "books.h"
+#include "tools.h"
 
+///< Client program
 int main(int argc, char* argv[]) {
-  if (!CheckCorrectParams(argc, 2)) {
-    Usage(argv);
-
-    return EXIT_FAILURE;
-  }
-
-  ProgramPurpose();
-
-  int tax{ToIntegrer(argv[1])};
-  Books quijote{"El quijote de la Mancha", 1605, 21.0};
-  Books lazarillo{"El lazarillo de Tormes", 1554, 18.0};
-  Books pilares{"Los pilares de la Tierra", 1989, 27.0};
-
-  // Con impuestos
+  ///< Verification of suficient amount of parameters in program call
+  if (!CheckCorrectParameters(argc, argv, 5)) exit(EXIT_SUCCESS);
+  ///< Initial values
+  int tax{std::stod(argv[4])};
+  Books quijote{argv[1], std::stoi(argv[2]), std::stod(argv[3])};
+  Books lazarillo{"El lazarillo de Tormes", 1554, 18.00};
+  Books pilares;  //"Los pilares de la Tierra", 1989, 27.00€
+  PrintProgramPurpose();
+  std::cout << "Book 1:\n  " << quijote << "\nBook 2:\n  " << lazarillo
+            << "\nBook 3:\n  " << pilares << std::endl;
+  ///< Values introduced by the user
+  std::cout << "\nInroduce the dimensions of the third book (title -> year -> "
+               "price): ";
+  std::cin >> pilares;
+  std::cout << "Updated values:\nBook 1:\n  " << quijote << "\nBook 2:\n  "
+            << lazarillo << "\nBook 3:\n  " << pilares << std::endl;
+  ///< Tax included
   quijote.TaxedPrice(tax);
   lazarillo.TaxedPrice(tax);
   pilares.TaxedPrice(tax);
-
-  std::cout << "Libros con impuestos:" << std::endl;
-  std::cout << "  " << quijote << std::endl;
-  std::cout << "  " << lazarillo << std::endl;
-  std::cout << "  " << pilares << std::endl;
-
+  std::cout << "Books with taxed price:\nBook 1:\n  " << quijote
+            << "\nBook 2:\n  " << lazarillo << "\nBook 3:\n  " << pilares
+            << std::endl;
   return 0;
 }
