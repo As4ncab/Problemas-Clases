@@ -4,7 +4,7 @@
 # Informática Básica
 
 # @author Alexia Sánchez Cabrera    (alu0101482323@ull.edu.es)
-# @date DD/MM/YYYY
+# @date 04/01/2024
 # @brief CMakeLists.txt Example:
 #          CMakeLists.txt defines the whole build.
 #          CMake reads CMakeLists.txt sequentially.
