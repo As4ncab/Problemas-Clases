@@ -1,4 +1,0 @@
-/home/usuario/problemas/Problemas-Clases/Books/build/CMakeFiles/rebuild_cache.dir
-/home/usuario/problemas/Problemas-Clases/Books/build/CMakeFiles/edit_cache.dir
-/home/usuario/problemas/Problemas-Clases/Books/build/CMakeFiles/runtests.dir
-/home/usuario/problemas/Problemas-Clases/Books/build/CMakeFiles/books.dir

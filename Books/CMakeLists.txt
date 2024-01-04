@@ -56,15 +56,19 @@ include_directories(${PROJECT_SOURCE_DIRECTORY}/src)
 
 # Add executables "book" and "runtests" to be built from source files
 add_executable(books
-               src/books.h
-               src/books.cc
-               src/books_main.cc)
+               ../src/tools.h
+               ../src/tools.cc
+               ../src/books.h
+               ../src/books.cc
+               ../src/books_main.cc)
 
 add_executable(runtests
-               src/books.h
-               src/books.cc
-               test/books_test.cc
-               test/tests_main.cc)
+               ../src/tools.h
+               ../src/tools.cc
+               ../src/books.h
+               ../src/books.cc
+               ../test/books_test.cc
+               ../test/tests_main.cc)
 
 # Add gtests libraries
 target_link_libraries(runtests ${GTEST_LIBRARIES} pthread)

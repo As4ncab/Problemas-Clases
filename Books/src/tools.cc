@@ -30,10 +30,10 @@ void PrintProgramPurpose(void) { std::cout << kHelpText << std::endl; }
  * @param argv
  */
 void Usage(char** argv) {
-  std::cout << argv[0] << " -- Book computing program\nUsage: " << argv[0]
-            << " [TITLE] [YEAR] [PRICE]\n  TITLE: Title of the book\n  YEAR: "
-               "Year that the book was released\n  PRICE: Price of the book"
-            << std::endl;
+  std::cout
+      << argv[0] << " -- Book computing program\nUsage: " << argv[0]
+      << " [TAX]\n  TAX: Tax percentage to apply to the price of each book"
+      << std::endl;
 }
 
 /**
@@ -54,8 +54,8 @@ bool CheckCorrectParameters(const int argc, char** argv,
   }
   if (argc != kCorrectParameters) {
     std::cout << argv[0] << " -- Book computing program\nUsage: " << argv[0]
-              << " [TITLE] [YEAR] [PRICE]\nTry " << argv[0]
-              << " --help for more information" << std::endl;
+              << " [TAX]\nTry " << argv[0] << " --help for more information"
+              << std::endl;
     return 0;
   }
   return 1;

@@ -12,8 +12,10 @@
  */
 
 #include "../src/books.h"
-#include "../src/tools.h"
 
+#include <vector>
+
+#include "../src/tools.h"
 #include "gtest/gtest.h"
 
 namespace {
@@ -37,16 +39,17 @@ TEST(TaxedPrice, TaxEqualToZero) {
 
 ///< Function CheckCorrectParams()
 TEST(CorrectParams, CorrectAmountOfParameters) {
-  char** argv;
+  char* argv[]{(char*)"./program", (char*)"param"};
   ///< argc == 2 parameters
   EXPECT_EQ(CheckCorrectParameters(2, argv, 2), true);
 }
 
 TEST(CorrectParams, IncorrectAmountOfParameters) {
-  char** argv;
+  char* argv[]{(char*)"./program"};
+  char* argv2[]{(char*)"./program", (char*)"param1", (char*)"param2"};
   ///< argc < 2 parameters
   EXPECT_EQ(CheckCorrectParameters(1, argv, 2), 0);
   ///< argc > 2 parameters
-  EXPECT_EQ(CheckCorrectParameters(3, argv, 2), 0);
+  EXPECT_EQ(CheckCorrectParameters(3, argv2, 2), 0);
 }
-}  ///< namespace
+}  // namespace

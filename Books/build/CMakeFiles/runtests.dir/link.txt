@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/runtests.dir/src/books.cc.o CMakeFiles/runtests.dir/test/books_test.cc.o CMakeFiles/runtests.dir/test/tests_main.cc.o  -o runtests  /usr/local/lib/libgtest.a -lpthread -lpthread 

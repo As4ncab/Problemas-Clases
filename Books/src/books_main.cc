@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
   ///< Verification of suficient amount of parameters in program call
   if (!CheckCorrectParameters(argc, argv, 2)) exit(EXIT_SUCCESS);
   ///< Initial values
-  int tax{std::stod(argv[1])};
+  double tax{std::stod(argv[1])};
   Books quijote{"El Quijote de La Mancha", 1605, 21.00};
   Books lazarillo{"El lazarillo de Tormes", 1554, 18.00};
   Books pilares{"Los pilares de la Tierra", 1989, 27.00};
